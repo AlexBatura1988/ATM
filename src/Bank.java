@@ -63,4 +63,12 @@ public class Bank {
         this.accounts.add(newAccount);
         return newUser;
     }
+    public User userLogin(String userID, String pin){
+        for(User user : this.users){
+            if(user.getUUID().compareTo(userID) == 0 && user.validatePin(pin)){
+                return user;
+            }
+        }
+        return null;
+    }
 }
