@@ -24,4 +24,10 @@ public class User {
         this.accounts = new ArrayList<Account>();
         System.out.printf("New user %s, %s with ID %s created.\n",lastName,firstName,this.uuid);
     }
+    public void addAccount(Account account){
+        this.accounts.add(account);
+    }
+    public String getUUID(){
+        return this.uuid;
+    }
 }
