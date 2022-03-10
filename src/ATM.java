@@ -130,8 +130,6 @@ public class ATM {
                 System.out.println("Invalid account, please try again");
             }
         } while (toAcct < 0 || toAcct >= user.numAccounts());
-        acctBal = user.getAcctBalance(toAcct);
-
         do {
             System.out.printf("Enter the amount to transfer (max $%.02f) : $ ", acctBal);
             amount = scanner.nextDouble();
