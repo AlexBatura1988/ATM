@@ -6,6 +6,12 @@ public class Bank {
     private ArrayList<User> users;
     private ArrayList<Account> accounts;
 
+    Bank(String name){
+        this.name = name;
+        this.users = new ArrayList<User>();
+        this.accounts = new ArrayList<Account>();
+    }
+
     public String getNewUserUUID() {
         users = new ArrayList<>();
         String uuid;
@@ -70,5 +76,8 @@ public class Bank {
             }
         }
         return null;
+    }
+    public String getName(){
+        return this.name;
     }
 }
